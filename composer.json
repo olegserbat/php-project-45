@@ -7,8 +7,9 @@
     "type": "project",
     "license": "MIT",
     "autoload": {
+        "files": ["src/Cli.php"],
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
+            "BrainGames\\Cli\\": "src/"
         }
     },
     "authors": [
@@ -16,5 +17,7 @@
             "name": "Ushkevich Oleg"
         }
     ],
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.22"
+    }
 }
