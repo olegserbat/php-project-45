@@ -16,7 +16,8 @@ function getDialog()
         $digit = rand();
         line("Question: %d", $digit);
         $answer = prompt('Your answer ');
-        if (($digit % 2 == 0 and $answer == 'yes') or ($digit % 2 != 0 and $answer == 'no')) {
+        $digit%2==0 ? $rightAnswer='yes' : $rightAnswer='no';
+        if ($answer==$rightAnswer) {
             line('Correct!');
             $i++;
             if ($i == 3) {
@@ -24,16 +25,12 @@ function getDialog()
                 return;
             }
         } else {
-            if ($digit % 2 == 0 and $answer !== 'yes') {
-                line("%s is wrong answer ;(. Correct answer was 'yes'.", $answer);
+                line("%s is wrong answer ;(.", $answer);
+                line("Correct answer was %s",$rightAnswer);
                 line("Let's try again, %s", $name);
                 return;
             }
-            if ($digit % 2 != 0 and $answer !== 'no') {
-                line("%s is wrong answer ;(. Correct answer was 'no'.", $answer);
-                line("Let's try again, %s", $name);
-                return;
-            }
+
         }
     }
-}
+
