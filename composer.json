@@ -8,7 +8,7 @@
     "type": "project",
     "license": "MIT",
     "autoload": {
-        "files": ["src/Cli.php","src/gameCode.php"],
+        "files": ["src/Cli.php","src/gameCode.php","src/Engine.php"],
         "psr-4": {
             "BrainGames\\Cli\\": "src/"
         }
