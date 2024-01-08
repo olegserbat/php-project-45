@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+
+use function BrainGames\Cli\sayName;
+use function BrainGames\Cli\getAnswer;
+use function BrainGames\Cli\getCorrect;
+use function BrainGames\Cli\getWrong;
+use function cli\line;
+
+$name=sayName();
+line('What is the result of the expression?');
+$i=0;
+while ($i < 3) {
+    $a=rand(0,100);
+    $b=rand(0,100);
+    $mark=substr('+-*',rand(0,2),1);
+    $task = "{$a} {$mark} {$b}";
+    $answer = getAnswer($task);
+    switch ($mark){
+        case '+': $rightAnswer=$a+$b; break;
+        case '-': $rightAnswer=$a-$b; break;
+        case '*': $rightAnswer=$a*$b; break;
+    }
+    if($answer==$rightAnswer){
+        getCorrect($name);
+        $i++;
+    } else {
+        getWrong($answer,$rightAnswer,$name);
+        $i=3;
+    }
+}

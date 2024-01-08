@@ -2,26 +2,14 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use function cli\line;
+use function BrainGames\Cli\giveArrayForEven;
+use function BrainGames\Cli\giveDescriptionForEven;
+use function BrainGames\Cli\getDialogEngine;
 
-use function BrainGames\Cli\sayName;
-use function BrainGames\Cli\getAnswer;
-use function BrainGames\Cli\getCorrect;
-use function BrainGames\Cli\getWrong;
-$name=sayName();
-$i=0;
-while ($i < 3) {
-    $task = rand();
-    $answer = getAnswer($task);
-    $task % 2 == 0 ? $rightAnswer = 'yes' : $rightAnswer = 'no';
-    if($answer==$rightAnswer){
-        getCorrect($name);
-        $i++;
-    } else {
-        getWrong($answer,$rightAnswer,$name);
-        $i=3;
-    }
-}
-
+$descriptions = giveDescriptionForEven();
+$questions = giveArrayForEven();
+getDialogEngine($descriptions, $questions);
 
 
 
