@@ -2,14 +2,13 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function cli\line;
+
 use function BrainGames\Cli\giveArrayForEven;
 use function BrainGames\Cli\giveDescriptionForEven;
 use function BrainGames\Cli\getDialogEngine;
 
-$descriptions = giveDescriptionForEven();
-$questions = giveArrayForEven();
-getDialogEngine($descriptions, $questions);
+
+getDialogEngine(giveDescriptionForEven(), giveArrayForEven());
 
 
 

@@ -11,7 +11,7 @@ function getDialogEngine(string $description, array $answersQuestions)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($description);
-    $i=0;
+    $i = 0;
     foreach ($answersQuestions as $key => $value) {
         line("Question: %s", $key);
         $answer = prompt('Your answer ');

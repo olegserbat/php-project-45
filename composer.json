@@ -9,7 +9,7 @@
     "type": "project",
     "license": "MIT",
     "autoload": {
-        "files": ["src/Cli.php","src/gameCode.php","src/Engine.php","src/EvenGame.php"],
+        "files": ["src/Cli.php","src/gameCode.php","src/Engine.php","src/EvenGame.php","src/CalcGame.php"],
         "psr-4": {
             "BrainGames\\Cli\\": "src/"
         }
