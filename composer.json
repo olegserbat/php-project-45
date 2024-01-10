@@ -3,13 +3,14 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "description": "the first project",
     "type": "project",
     "license": "MIT",
     "autoload": {
-        "files": ["src/Cli.php","src/gameCode.php","src/Engine.php","src/EvenGame.php","src/CalcGame.php"],
+        "files": ["src/Cli.php","src/gameCode.php","src/Engine.php","src/EvenGame.php","src/CalcGame.php", "src/GcdGame.php"],
         "psr-4": {
             "BrainGames\\Cli\\": "src/"
         }
