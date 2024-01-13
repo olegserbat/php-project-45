@@ -7,7 +7,7 @@ function giveDescriptionsForGcd(): string
 
 }
 
-function giveArrayForGcd(): array // реализован алгоритм поиска Евклида
+function giveArrayForGcd(): array
 {
     $result=[];
     for($i=0; $i<3; $i++){
@@ -17,7 +17,7 @@ function giveArrayForGcd(): array // реализован алгоритм по�
     } return $result;
 }
 
-function getMaxRemains(): array
+function getMaxRemains(): array // реализован алгоритм поиска Евклида
 {
 
     $a = rand(0, 10000);
