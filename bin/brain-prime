@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Cli\giveDescriptionsForPrime;
+use function BrainGames\Cli\giveArrayForPrime;
+use function BrainGames\Cli\getDialogEngine;
+
+getDialogEngine(giveDescriptionsForPrime(),giveArrayForPrime());

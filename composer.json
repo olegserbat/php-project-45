@@ -5,13 +5,14 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "description": "the first project",
     "type": "project",
     "license": "MIT",
     "autoload": {
-        "files": ["src/Cli.php","src/gameCode.php","src/Engine.php","src/EvenGame.php","src/CalcGame.php", "src/GcdGame.php", "src/progressionGame.php"],
+        "files": ["src/Cli.php","src/gameCode.php","src/Engine.php","src/EvenGame.php","src/CalcGame.php", "src/GcdGame.php", "src/progressionGame.php", "src/PrimeGame.php"],
         "psr-4": {
             "BrainGames\\Cli\\": "src/"
         }
