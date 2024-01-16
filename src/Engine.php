@@ -25,7 +25,7 @@ function getDialogEngine(string $description, array $answersQuestions)
         } else {
             line("%s is wrong answer ;(.", $answer);
             line("Correct answer was %s", $value);
-            line("Let's try again, %s", $name);
+            line("Let's try again, %s!", $name);
             return;
         }
 
