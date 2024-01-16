@@ -2,13 +2,13 @@
 
 namespace BrainGames\Cli;
 
-function giveDescriptionForEven():string
+function giveDescriptionForEven(): string
 {
-     return 'Answer "yes" if the number is even, otherwise answer "no".';
+    return 'Answer "yes" if the number is even, otherwise answer "no".';
 
 }
 
-function giveArrayForEven():array
+function giveArrayForEven(): array
 {
     $result = [];
     for ($i = 0; $i < 3; $i++) {

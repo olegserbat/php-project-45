@@ -3,8 +3,8 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 
+use function BrainGames\Cli\getDialogEngine;
 use function BrainGames\Cli\giveArrayForGcd;
 use function BrainGames\Cli\giveDescriptionsForGcd;
-use function BrainGames\Cli\getDialogEngine;
 
 getDialogEngine(giveDescriptionsForGcd(), giveArrayForGcd());

@@ -7,5 +7,5 @@ use function BrainGames\Cli\getDialogEngine;
 use function BrainGames\Cli\giveArrayForCalc;
 use function BrainGames\Cli\giveDescriptionForCalc;
 
-getDialogEngine(giveDescriptionForCalc(),giveArrayForCalc());
+getDialogEngine(giveDescriptionForCalc(), giveArrayForCalc());
 

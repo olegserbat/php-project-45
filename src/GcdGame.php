@@ -9,12 +9,13 @@ function giveDescriptionsForGcd(): string
 
 function giveArrayForGcd(): array
 {
-    $result=[];
-    for($i=0; $i<3; $i++){
-        foreach (getMaxRemains() as $key=>$value){
-            $result[$key]=$value;
+    $result = [];
+    for ($i = 0; $i < 3; $i++) {
+        foreach (getMaxRemains() as $key => $value) {
+            $result[$key] = $value;
         }
-    } return $result;
+    }
+    return $result;
 }
 
 function getMaxRemains(): array // реализован алгоритм поиска Евклида

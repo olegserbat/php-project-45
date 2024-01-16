@@ -5,7 +5,7 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-function getDialog( string $description, array $answersQuestions  )
+function getDialog(string $description, array $answersQuestions)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -16,8 +16,8 @@ function getDialog( string $description, array $answersQuestions  )
         $digit = rand();
         line("Question: %d", $digit);
         $answer = prompt('Your answer ');
-        $digit%2==0 ? $rightAnswer='yes' : $rightAnswer='no';
-        if ($answer==$rightAnswer) {
+        $digit % 2 == 0 ? $rightAnswer = 'yes' : $rightAnswer = 'no';
+        if ($answer == $rightAnswer) {
             line('Correct!');
             $i++;
             if ($i == 3) {
@@ -25,12 +25,12 @@ function getDialog( string $description, array $answersQuestions  )
                 return;
             }
         } else {
-                line("%s is wrong answer ;(.", $answer);
-                line("Correct answer was %s",$rightAnswer);
-                line("Let's try again, %s!", $name);
-                return;
-            }
-
+            line("%s is wrong answer ;(.", $answer);
+            line("Correct answer was %s", $rightAnswer);
+            line("Let's try again, %s!", $name);
+            return;
         }
+
     }
+}
 

@@ -1,31 +1,40 @@
 {
-    "name": "hexlet/code",
-    "bin": [
-        "bin/brain-games",
-        "bin/brain-even",
-        "bin/brain-calc",
-        "bin/brain-gcd",
-        "bin/brain-progression",
-        "bin/brain-prime"
+  "name": "hexlet/code",
+  "bin": [
+    "bin/brain-games",
+    "bin/brain-even",
+    "bin/brain-calc",
+    "bin/brain-gcd",
+    "bin/brain-progression",
+    "bin/brain-prime"
+  ],
+  "description": "the first project",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "files": [
+      "src/Cli.php",
+      "src/gameCode.php",
+      "src/Engine.php",
+      "src/EvenGame.php",
+      "src/CalcGame.php",
+      "src/GcdGame.php",
+      "src/progressionGame.php",
+      "src/PrimeGame.php"
     ],
-    "description": "the first project",
-    "type": "project",
-    "license": "MIT",
-    "autoload": {
-        "files": ["src/Cli.php","src/gameCode.php","src/Engine.php","src/EvenGame.php","src/CalcGame.php", "src/GcdGame.php", "src/progressionGame.php", "src/PrimeGame.php"],
-        "psr-4": {
-            "BrainGames\\Cli\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Ushkevich Oleg"
-        }
-    ],
-    "require": {
-        "wp-cli/php-cli-tools": "^0.11.22"
-    },
-    "require-dev": {
-        "squizlabs/php_codesniffer": "^3.8"
+    "psr-4": {
+      "BrainGames\\Cli\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Ushkevich Oleg"
+    }
+  ],
+  "require": {
+    "wp-cli/php-cli-tools": "^0.11.22"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.8"
+  }
 }
