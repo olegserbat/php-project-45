@@ -1,10 +1,10 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace  BrainGames\Cli;
+
 function giveDescriptionsForProgression(): string
 {
     return 'What number is missing in the progression?';
-
 }
 
 function giveArrayForProgression(): array
@@ -36,4 +36,3 @@ function getProgressive(): array
     $result[$qustion] = $rightAnswer;
     return $result;
 }
-

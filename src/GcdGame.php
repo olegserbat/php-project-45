@@ -1,10 +1,10 @@
 <?php
 
 namespace BrainGames\Cli;
+
 function giveDescriptionsForGcd(): string
 {
     return 'Find the greatest common divisor of given numbers.';
-
 }
 
 function giveArrayForGcd(): array
@@ -40,6 +40,4 @@ function getMaxRemains(): array // реализован алгоритм пои�
     $result[$key] = $max;
     return $result;
 }
-
-
 

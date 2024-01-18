@@ -1,10 +1,10 @@
 <?php
 
 namespace BrainGames\Cli;
+
 function giveDescriptionForCalc(): string
 {
     return 'What is the result of the expression?';
-
 }
 
 function giveArrayForCalc(): array

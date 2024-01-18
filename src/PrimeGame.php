@@ -1,10 +1,10 @@
 <?php
 
 namespace BrainGames\Cli;
+
 function giveDescriptionsForPrime(): string
 {
     return 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
 }
 
 function giveArrayForPrime(): array
@@ -52,4 +52,3 @@ function getPrimeNumber(): array // получение массива прост
     }
     return $result;
 }
-

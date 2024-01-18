@@ -28,8 +28,5 @@ function getDialogEngine(string $description, array $answersQuestions)
             line("Let's try again, %s!", $name);
             return;
         }
-
     }
 }
-
-
