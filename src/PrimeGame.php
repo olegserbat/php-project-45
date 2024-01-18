@@ -35,7 +35,7 @@ function getPrime(): array
     $a = rand(2, 100);
     $result = [];
     $primeNumber = getPrimeNumber();
-    if (in_array($a, $primeNumber, false)) {
+    if (in_array($a, $primeNumber, true)) {
         $result[$a] = 'yes';
     } else {
         $result[$a] = 'no';
