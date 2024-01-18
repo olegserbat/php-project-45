@@ -7,30 +7,6 @@ function giveDescriptionsForPrime(): string
     return 'Answer "yes" if given number is prime. Otherwise answer "no".';
 }
 
-function giveArrayForPrime(): array
-{
-    $result = [];
-    while (count($result) < 3) {
-        foreach (getPrime() as $key => $value) {
-            $result[$key] = $value;
-        }
-    }
-    return $result;
-}
-
-function getPrime(): array
-{
-    $a = rand(2, 100);
-    $result = [];
-    $primeNumber = getPrimeNumber();
-    if (in_array($a, $primeNumber)) {
-        $result[$a] = 'yes';
-    } else {
-        $result[$a] = 'no';
-    }
-    return $result;
-}
-
 function getPrimeNumber(): array // получение массива простых чисел по методу Эратосфена
 {
     $n = 100;// предел массива
@@ -53,3 +29,28 @@ function getPrimeNumber(): array // получение массива прост
     }
     return $result;
 }
+
+function getPrime(): array
+{
+    $a = rand(2, 100);
+    $result = [];
+    $primeNumber = getPrimeNumber();
+    if (in_array($a, $primeNumber, false)) {
+        $result[$a] = 'yes';
+    } else {
+        $result[$a] = 'no';
+    }
+    return $result;
+}
+
+function giveArrayForPrime(): array
+{
+    $result = [];
+    while (count($result) < 3) {
+        foreach (getPrime() as $key => $value) {
+            $result[$key] = $value;
+        }
+    }
+    return $result;
+}
+
