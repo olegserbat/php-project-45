@@ -22,7 +22,7 @@ function getPrime(): array
 {
     $a = rand(2, 100);
     $result = [];
-    $primeNumber=getPrimeNumber();
+    $primeNumber = getPrimeNumber();
     if (in_array($a, $primeNumber)) {
         $result[$a] = 'yes';
     } else {
