@@ -40,4 +40,3 @@ function getMaxRemains(): array // реализован алгоритм пои�
     $result[$key] = $max;
     return $result;
 }
-
