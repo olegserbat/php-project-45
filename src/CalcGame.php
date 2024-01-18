@@ -15,6 +15,7 @@ function giveArrayForCalc(): array
         $b = rand(0, 100);
         $mark = substr('+-*', rand(0, 2), 1);
         $key = "{$a} {$mark} {$b}";
+        $rightAnswer=0;
         switch ($mark) {
             case '+':
                 $rightAnswer = $a + $b;
