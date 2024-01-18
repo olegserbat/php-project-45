@@ -53,4 +53,3 @@ function giveArrayForPrime(): array
     }
     return $result;
 }
-
