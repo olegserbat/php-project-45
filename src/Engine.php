@@ -5,7 +5,9 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-function getDialogEngine(string $description, array $answersQuestions)
+define('NUMBER_OF_QUSTIONS', 3);
+
+function startEngineGame(string $description, array $answersQuestions)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');

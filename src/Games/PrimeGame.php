@@ -2,10 +2,7 @@
 
 namespace BrainGames\Cli;
 
-function giveDescriptionsForPrime(): string
-{
-    return 'Answer "yes" if given number is prime. Otherwise answer "no".';
-}
+define('DESCRIPTION_FOR_PRIME', 'Answer "yes" if given number is prime. Otherwise answer "no".');
 
 function getPrimeNumber(): array // получение массива простых чисел по методу Эратосфена
 {
@@ -46,7 +43,7 @@ function getPrime(): array
 function giveArrayForPrime(): array
 {
     $result = [];
-    while (count($result) < 3) {
+    while (count($result) < NUMBER_OF_QUSTIONS) {
         foreach (getPrime() as $key => $value) {
             $result[$key] = $value;
         }

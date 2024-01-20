@@ -2,15 +2,12 @@
 
 namespace BrainGames\Cli;
 
-function giveDescriptionsForGcd(): string
-{
-    return 'Find the greatest common divisor of given numbers.';
-}
+define('DESCRIPTION_FOR_GCD', 'Find the greatest common divisor of given numbers.');
 
 function giveArrayForGcd(): array
 {
     $result = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < NUMBER_OF_QUSTIONS; $i++) {
         foreach (getMaxRemains() as $key => $value) {
             $result[$key] = $value;
         }

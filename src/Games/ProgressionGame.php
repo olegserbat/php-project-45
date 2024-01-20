@@ -1,16 +1,14 @@
 <?php
 
-namespace  BrainGames\Cli;
+namespace BrainGames\Cli;
 
-function giveDescriptionsForProgression(): string
-{
-    return 'What number is missing in the progression?';
-}
+define('DESCRIPTION_FOR_PROGRESSION', 'What number is missing in the progression?');
+
 
 function giveArrayForProgression(): array
 {
     $result = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < NUMBER_OF_QUSTIONS; $i++) {
         foreach (getProgressive() as $key => $value) {
             $result[$key] = $value;
         }

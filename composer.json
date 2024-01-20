@@ -14,17 +14,13 @@
   "autoload": {
     "files": [
       "src/Cli.php",
-      "src/gameCode.php",
       "src/Engine.php",
-      "src/EvenGame.php",
-      "src/CalcGame.php",
-      "src/GcdGame.php",
-      "src/progressionGame.php",
-      "src/PrimeGame.php"
-    ],
-    "psr-4": {
-      "BrainGames\\Cli\\": "src/"
-    }
+      "src/Games/EvenGame.php",
+      "src/Games/CalcGame.php",
+      "src/Games/GcdGame.php",
+      "src/Games/ProgressionGame.php",
+      "src/Games/PrimeGame.php"
+    ]
   },
   "authors": [
     {

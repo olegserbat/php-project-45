@@ -2,15 +2,12 @@
 
 namespace BrainGames\Cli;
 
-function giveDescriptionForCalc(): string
-{
-    return 'What is the result of the expression?';
-}
+define('DESCRIPTION_FOR_CALC', 'What is the result of the expression?');
 
 function giveArrayForCalc(): array
 {
     $result = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < NUMBER_OF_QUSTIONS; $i++) {
         $a = rand(0, 100);
         $b = rand(0, 100);
         $mark = substr('+-*', rand(0, 2), 1);
