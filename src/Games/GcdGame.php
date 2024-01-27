@@ -17,17 +17,15 @@ function giveArrayForGcd(): array
 
 function getMaxRemains(): array // реализован алгоритм поиска Евклида
 {
-
     $a = rand(0, 10000);
     $b = rand(0, 10000);
-    $a > $b ? $max = $a : $max = $b;
-    $a < $b ? $min = $a : $min = $b;
+    $max = ($a > $b) ? $a : $b;
+    $min = ($a < $b) ? $a : $b;
     $remains = 1;
     $result = [];
     $key = "{$a} {$b}";
     while ($remains != 0) {
         $remains = $max % $min;
-
         $max = $min;
         $min = $remains;
         if ($remains == 0) {

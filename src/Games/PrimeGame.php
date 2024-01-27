@@ -4,39 +4,18 @@ namespace BrainGames\Cli;
 
 define('DESCRIPTION_FOR_PRIME', 'Answer "yes" if given number is prime. Otherwise answer "no".');
 
-function getPrimeNumber(): array // получение массива простых чисел по методу Эратосфена
+function checkPrime(): array
 {
-    $n = 100;// предел массива
-    $arrOne = [];
+    $limit = 1000;   //предел выбора чисел условно, для простоты игры, установлен 1000, можно любой другой
+    $a = rand(2, $limit);
     $result = [];
-    $arrTwo = [];
-    for ($i = 2; $i < $n; $i++) {
-        $arrOne[] = $i;
-    }
-    $j = 0;
-    while ($j < count($arrOne)) {
-        $result[] = $arrOne[0];
-        foreach ($arrOne as $value) {
-            if ($value % ($arrOne[0]) != 0) {
-                $arrTwo[] = $value;
-            }
+    for ($i = 2; $i < $a; $i++) {
+        if ($a % $i === 0) {
+            $result[$a] = 'no';
+            return $result;
         }
-        $arrOne = $arrTwo;
-        $arrTwo = [];
     }
-    return $result;
-}
-
-function getPrime(): array
-{
-    $a = rand(2, 100);
-    $result = [];
-    $primeNumber = getPrimeNumber();
-    if (in_array($a, $primeNumber, true)) {
-        $result[$a] = 'yes';
-    } else {
-        $result[$a] = 'no';
-    }
+    $result[$a] = 'yes';
     return $result;
 }
 
@@ -44,7 +23,7 @@ function giveArrayForPrime(): array
 {
     $result = [];
     while (count($result) < NUMBER_OF_QUSTIONS) {
-        foreach (getPrime() as $key => $value) {
+        foreach (checkPrime() as $key => $value) {
             $result[$key] = $value;
         }
     }

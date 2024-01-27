@@ -13,22 +13,17 @@ function startEngineGame(string $description, array $answersQuestions)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($description);
-    $i = 0;
     foreach ($answersQuestions as $key => $value) {
         line("Question: %s", $key);
         $answer = prompt('Your answer ');
-        if ($answer == $value) {
-            line('Correct!');
-            $i++;
-            if ($i == 3) {
-                line('Congratulations, %s!', $name);
-                return;
-            }
-        } else {
+        if ($answer != $value) {
             line("%s is wrong answer ;(.", $answer);
             line("Correct answer was %s", $value);
             line("Let's try again, %s!", $name);
             return;
+        } else {
+            line('Correct!');
         }
     }
+    line('Congratulations, %s!', $name);
 }
